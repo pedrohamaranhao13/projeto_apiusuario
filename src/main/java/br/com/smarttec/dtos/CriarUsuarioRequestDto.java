@@ -17,8 +17,8 @@ public class CriarUsuarioRequestDto {
 	@NotBlank(message = "Por favor, informe o e-mail do usuário.")
 	private String email;
 	
-	@Pattern(regexp = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$^&+=!]).{8,}$",
-					message = "Por vaor, informe uma senha com letras maiúsculas, letras minusculas, números, símbolos e pelo menos 8 caracteres.")
+	@Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$",
+					message = "Por favor, informe uma senha com letras maiúsculas, letras minusculas, números, símbolos e pelo menos 8 caracteres.")
 	@NotBlank(message = "Por favor, informe o senha do usuário.")
 	private String senha;
 }
